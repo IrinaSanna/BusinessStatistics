@@ -2,12 +2,12 @@ package ru.netology.stats.BusinessStatistics.service;
 
 public class StatsService {
     public int sumAllSales(long[] sales) {
-        long sum = 0;
+        int sum = 0;
 
         for (long allSales : sales) {
-            sum += allSales;
+            sum += (int) allSales;
         }
-        return (int) sum;
+        return sum;
     }
 
     public int averageAmountSales(long[] sales) {
@@ -45,7 +45,7 @@ public class StatsService {
                 numberMonth++;
             }
         }
-        return numberMonth;
+        return (int) numberMonth;
     }
 
     public int salesAboveAverage(long[] sales) {
